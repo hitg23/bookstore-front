@@ -117,6 +117,7 @@ export default function DetailEditPage() {
             name="price"
             placeholder="Price"
             label="Price"
+            type="number"
             onChange={handelCreateChange}
           />
           <TextField

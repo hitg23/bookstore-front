@@ -27,14 +27,32 @@ export default function Login() {
   return (
     <div>
       <SearchAppBar />
-      <TextField onChange={(e) => setUsername(e.target.value)} />
-      <TextField onChange={(e) => setPassword(e.target.value)} />
-      <Button variant="outlined" onClick={handleLogin}>
-        Login
-      </Button>
-      <Link to="/register">
-        <Button>Don't have an account? Please Register here</Button>
-      </Link>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 12,
+          margin: "50px 20%",
+        }}
+      >
+        <TextField
+          label="Username"
+          placeholder="Username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <TextField
+          label="Password"
+          placeholder="Password"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button variant="outlined" onClick={handleLogin}>
+          Login
+        </Button>
+        <Link to="/register">
+          <Button>Don't have an account? Please Register here</Button>
+        </Link>
+      </div>
     </div>
   );
 }

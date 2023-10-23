@@ -34,16 +34,41 @@ export default function Register() {
   return (
     <div>
       <SearchAppBar />
-      <TextField onChange={(e) => setFullName(e.target.value)} />
-      <TextField onChange={(e) => setEmail(e.target.value)} />
-      <TextField onChange={(e) => setUsername(e.target.value)} />
-      <TextField onChange={(e) => setPassword(e.target.value)} />
-      <Button variant="outlined" onClick={handleRegister}>
-        Register
-      </Button>
-      <Link to="/register">
-        <Button>Already have an account?</Button>
-      </Link>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 12,
+          margin: "50px 20%",
+        }}
+      >
+        <TextField
+          label="Fullname"
+          placeholder="Fullname"
+          onChange={(e) => setFullName(e.target.value)}
+        />
+        <TextField
+          label="Email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <TextField
+          label="Username"
+          placeholder="Username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <TextField
+          label="Password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button variant="outlined" onClick={handleRegister}>
+          Register
+        </Button>
+        <Link to="/register">
+          <Button>Already have an account?</Button>
+        </Link>
+      </div>
     </div>
   );
 }
